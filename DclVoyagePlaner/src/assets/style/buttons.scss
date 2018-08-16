@@ -1,0 +1,62 @@
+@import '~assets/style/colors';
+// custom button css
+.btn {
+    min-width: 130px;
+    height: 35px;
+    padding: 0 20px 0 20px;
+    border-radius: 4px;
+    margin: 15px 20px 15px 0px;
+    @extend .b2;
+    cursor: pointer;
+    outline: none;
+}
+
+.btn-primary {
+    background-color: $kng-color-green;
+    border: 1px solid $kng-color-green;
+    color: $kng-color-white;
+    &:hover {
+        background-color: $kng-color-primary-hover;
+        border: 1px solid $kng-color-primary-hover;
+        outline: none;
+    }
+    &:focus,
+    &:active {
+        background-color: $kng-color-primary-pressed;
+        border: 1px solid $kng-color-primary-pressed;
+    }
+    &:disabled {
+        color: $kng-color-primary-workspace-disabled;
+        background-color: $kng-color-workspace-grey;
+        border-color: $kng-color-workspace-grey;
+    }
+}
+
+.btn-disabled {
+    background: $kng-color-primary-workspace-disabled;
+    border: 1px solid $kng-color-primary-workspace-disabled;
+    &:hover {
+        cursor: default;
+    }
+}
+
+.btn-secondary {
+    background-color: $kng-color-white;
+    border: 1px solid $kng-color-medium-grey;
+    color: $kng-color-active-grey;
+    &:hover {
+        color: $kng-color-primary-blue;
+    }
+    &:focus,
+    &:active {
+        color: $kng-color-active-grey;
+        background-color: $kng-color-secondary-pressed-gray;
+        border: 1px solid $kng-color-medium-grey;
+    }
+    
+    &:disabled {
+        color: $kng-color-primary-workspace-disabled;
+        background-color: $kng-color-workspace-grey;
+        border-color: $kng-color-workspace-grey;
+    }
+}

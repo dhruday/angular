@@ -1,0 +1,89 @@
+@import '~assets/style/mixins';
+@import '~assets/style/colors';
+
+body {
+    margin: 0;
+    color: $kng-color-active-dark-blue;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    .vp-container {
+        width:100%;
+        margin: 0 auto;
+        height: 100%;
+    }
+    .pull-left {
+        float: left !important;
+    }
+    .pull-right {
+        float: right !important;
+    }
+    .vp-main-container {
+        width: 100%;
+        overflow-y: auto;
+        height: calc(100vh - 129px);
+        margin-top: 52px;    
+        background: linear-gradient($kng-color-white, $kng-color-workspace-grey);
+    }
+    .vp-container-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        float: none;
+        background-color: $kng-color-white;
+    }
+    .vp-footer {
+        width:100%;
+        footer {
+            display: block;
+            .footer-main {
+                width: 100%;
+                padding: 20px 15px;
+                border: 1px solid $kng-color-medium-grey;
+                float: left;            
+                .btn {
+                    max-width: 135px;
+                    margin:0
+                }
+                .primary {
+                    background: $kng-color-green;
+                    height: 35px;
+                    border-radius: 4px;
+                    border: 0;
+                    color: $kng-color-white;
+                    &:active {
+                        background-color: $kng-color-primary-pressed;                    
+                    }
+                    &:hover {
+                        background-color: $kng-color-primary-hover;
+                    }
+                }
+                .secondary {
+                    margin-right: 20px;
+                    background: $kng-color-white;
+                    width: 100%;
+                    height: 35px;
+                    border-radius: 4px;
+                    border: 1px solid $kng-color-medium-grey;
+                    color: $kng-color-active-grey;
+                    &:hover {
+                        color: $kng-color-primary-blue;
+                    }
+                }
+            }
+        }
+    }    
+}
+*, :after, :before {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+@media (min-width: 1201px) {
+    .vp-main-container {
+        padding-top: 52px;
+        height: calc(100vh - 129px);
+    }     
+}

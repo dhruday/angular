@@ -1,0 +1,16 @@
+/** Font **/
+
+$defaultFontSize: 16px;
+@mixin fontSize($sizeValue: $defaultFontSize) {
+    font-size: $sizeValue;
+}
+
+/** Transition **/
+
+$defaulTransitiontTime: 0.5s;
+@mixin transition($timeValue: $defaulTransitiontTime) {
+    -webkit-transition: all $timeValue ease;
+    -moz-transition: all $timeValue ease;
+    -o-transition: all $timeValue ease;
+    transition: all $timeValue ease;
+}

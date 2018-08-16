@@ -1,0 +1,117 @@
+@import '~assets/style/colors';
+@import '~assets/style/variables';
+@import '~assets/style/fonts';
+.pop-up-content {
+    width: 480px;
+    border-radius: 6px;
+    background: $kng-color-white;
+    height: 80vh; // As per UX leaving 10% top and 10% bottom margins
+    .header {
+        font-size: 20px;
+        color: $kng-color-active-dark-blue;
+        // @extend .h4-heavy; Light font needed for panel header with 20px size
+        font-family: $avenir-light-font;
+        text-align: left;
+        height: $navbar-height;
+        line-height: $navbar-height;
+        margin: 0px 20px 0px 20px;
+    }
+    .content-wrapper {
+        height: calc(80vh - 117px); // For scrolling
+        overflow-y: auto;
+        .content {
+            margin-left: 20px;
+            margin-right: 20px;
+            @extend .b2;
+            color: $kng-color-active-dark-blue;
+        }
+    }
+    
+    .button-bar {
+        width: 100%;
+        background-color: transparent; // this is for border-radius to show at bottom
+        position: absolute;
+        border-top: 1px solid $kng-color-workspace-grey;
+        height: 65px;
+        bottom: 0;
+        text-align: right;
+        .button-container {
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            .btn {
+                margin-left: 0;
+            }
+            .link-button {
+                color: $kng-color-primary-blue;
+                @extend .b2;
+                cursor: pointer;
+                outline: none;
+                &:hover {
+                    color: $kng-color-medium-blue;
+                    text-decoration: underline;
+                }
+                &:focus,
+                &:active {
+                    color: $kng-color-active-dark-blue;
+                }
+            }
+        }
+    }
+}
+
+.success-popup,
+.error-popup {
+    width: 480px;
+    border-radius: 6px;
+    background: $kng-color-white;
+    height: 326px;
+
+    .content {
+        color: $kng-color-active-dark-blue;
+        height: 260px; 
+        display: flex;
+        .inner {
+            margin: auto;
+            text-align: center;
+
+            .ic-newresort {
+                margin: auto;
+                height: 44px;
+                width: 44px;
+            }
+
+            .success-header {
+                @extend .h3;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+
+            .success-message {
+                @extend .b2;
+            }
+
+            .error-alert {
+                .kng-ic-alert-md:before {
+                    font-size: 44px;
+                }
+            }
+        }
+    }
+
+    .button-bar {
+        width: 100%;
+        background-color: transparent; // this is for border-radius to show at bottom
+        position: absolute;
+        border-top: 1px solid $kng-color-workspace-grey;
+        height: 65px;
+        bottom: 0;
+        text-align: right;
+    
+        .button-container {
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}

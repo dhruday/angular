@@ -1,0 +1,6 @@
+@import '~assets/style/colors';
+
+// Eventually need to move all common table styles here
+.col-header-border {
+    border-bottom: 3px solid $kng-color-workspace-grey;
+}
